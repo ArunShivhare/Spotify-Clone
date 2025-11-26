@@ -164,4 +164,11 @@ body {
     bottom: 0;
     width: 100%;
     background-color: rgb(8, 55, 8);
+    padding: 12px;
+}
+
+.songbuttons{
+    display: flex;
+    justify-content: center;
+    gap: 16px;
 }
