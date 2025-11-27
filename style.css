@@ -160,10 +160,10 @@ body {
 }
 
 .playbar{
-    position: absolute;
+    position: fixed;
     bottom: 0;
-    width: 100%;
-    background-color: rgb(8, 55, 8);
+    width: 90%;
+    background-color: rgb(168, 176, 168);
     padding: 12px;
 }
 
@@ -171,4 +171,44 @@ body {
     display: flex;
     justify-content: center;
     gap: 16px;
+}
+
+.songlist{
+    height: 600px;
+    overflow: auto;
+    margin: 44px 0;
+}
+
+.songlist ul{
+    padding: 0 12px;
+}
+
+.songlist ul li{
+    list-style-type: decimal;
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    cursor: pointer;
+    padding: 12px 0;
+    border: 1px solid white;
+    border-radius: 5px;
+    margin: 12px 0;
+    padding: 12px;
+}
+
+.songlist .info{
+    font-size: 12p;
+    width: 344px;
+}
+
+.playnow{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.playnow span{
+    font-size: 15px;
+    width: 65px;
+    padding: 12px;
 }
