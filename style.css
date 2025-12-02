@@ -86,9 +86,10 @@ body {
 .cardContainer {
     margin: 30px;
     display: flex;
+    justify-content: center;
     gap: 10px;
     flex-wrap: wrap;
-    overflow-y: scroll;
+    overflow-y: auto;
     max-height: 70vh;
 }
 
@@ -168,7 +169,7 @@ body {
     border-radius: 10px;
     padding: 12px;
     width: 70vw;
-    height: 40px;
+    min-height: 40px;
 }
 
 .songbuttons{
@@ -248,23 +249,59 @@ body {
 .actionvar{
     display: flex;
     justify-content: space-between;
+    margin: 20px 0;
+}
+
+.hamburger{
+    display: none;
+}
+
+.hamburgerContainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 14px;
 }
 
 @media (max-width: 1400px) {
     .left{
-        border: 2px solid red;
         position: absolute;
-        left: -100%;
+        left: -120%;
         transition: all 1s;
         z-index: 1;
-        width: 233px;
+        width: 370px;
+        background-color: black;
+    }
+
+    .close{
+        position: absolute;
+        width: 30px;
+        top: 30px;
+        right: 30px;
+    }
+
+    .playbar{
+        font-size: small;
+        width: calc(100vw - 60px);
+    }
+
+    .seekbar{
+        width: calc(100vw - 70px);
     }
 
     .right{
         width: 100vw;
     }
 
-    .playbar{
-        width: 95vw;
+    .hamburger{
+        display: block;
     }
+
+    .card{
+        width: 90vw;
+    }
+
+    /* .playbar{
+        width: 95vw;
+    } */
 }
