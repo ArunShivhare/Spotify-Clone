@@ -175,6 +175,7 @@ body {
     display: flex;
     justify-content: center;
     gap: 16px;
+    cursor: pointer;
 }
 
 .songlist{
@@ -218,13 +219,14 @@ body {
 }
 
 .seekbar{
-    height: 2px;
+    height: 4px;
     width: 98%;
     background: black;
     border-radius: 10px;
     position: absolute;
     bottom: 0;
     margin: 6px;
+    cursor: pointer;
 }
 
 .circle{
@@ -236,4 +238,33 @@ body {
     bottom: 6px;
     left: 0%;
     transition: left 0.5s;
+}
+
+.songinfo , .songtime{
+    color: black;
+    padding: 0 12px;
+}
+
+.actionvar{
+    display: flex;
+    justify-content: space-between;
+}
+
+@media (max-width: 1400px) {
+    .left{
+        border: 2px solid red;
+        position: absolute;
+        left: -100%;
+        transition: all 1s;
+        z-index: 1;
+        width: 233px;
+    }
+
+    .right{
+        width: 100vw;
+    }
+
+    .playbar{
+        width: 95vw;
+    }
 }
