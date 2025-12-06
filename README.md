@@ -1,1 +1,1 @@
-# Spotify-Clone
+# SoulFull - Personal Music Player
