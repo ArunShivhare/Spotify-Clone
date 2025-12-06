@@ -41,6 +41,14 @@ async function getsongs(folder) {
             // 2) split by both / and \
             const parts = pathname.split(/[/\\]/);
             const file = parts.pop();  // "song name.mp3"
+            // songs.push(file.split(".mp3")[0]); // remove .mp3
+            songs.push(file);  // if we remove .mp3 than it will not play
+        }
+        else if (element.href.endsWith(".mpeg")) {  // if file save as mpeg
+            const url = new URL(element.href);
+            let pathname = decodeURIComponent(url.pathname);
+            const parts = pathname.split(/[/\\]/);
+            const file = parts.pop(); 
             songs.push(file);
         }
     }
@@ -134,7 +142,7 @@ async function displayAlbums() {
 async function main() {
 
     //get the list of all songs
-    await getsongs("songs/newhits")
+    await getsongs("songs/oldsong")
     playmusic(songs[0], true)
 
     //display all the album on screen
